@@ -75,6 +75,7 @@ FINT ng[] = {1, 0, 0, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_ip1_cart
 CACHE_SIZE_T int3c2e_ip1_sph(double *out, FINT *dims, FINT *shls,
@@ -83,6 +84,7 @@ FINT ng[] = {1, 0, 0, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_ip1_sph
 CACHE_SIZE_T int3c2e_ip1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -91,6 +93,7 @@ FINT ng[] = {1, 0, 0, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_sf_3c2e1, 0);
 } // int3c2e_ip1_spinor
 ALL_CINT(int3c2e_ip1)
@@ -156,6 +159,7 @@ FINT ng[] = {0, 0, 1, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_ip2_cart
 CACHE_SIZE_T int3c2e_ip2_sph(double *out, FINT *dims, FINT *shls,
@@ -164,6 +168,7 @@ FINT ng[] = {0, 0, 1, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_ip2_sph
 CACHE_SIZE_T int3c2e_ip2_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -172,6 +177,7 @@ FINT ng[] = {0, 0, 1, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_sf_3c2e1, 0);
 } // int3c2e_ip2_spinor
 ALL_CINT(int3c2e_ip2)
@@ -221,6 +227,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_pvp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_pvp1_cart
 CACHE_SIZE_T int3c2e_pvp1_sph(double *out, FINT *dims, FINT *shls,
@@ -229,6 +236,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_pvp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_pvp1_sph
 CACHE_SIZE_T int3c2e_pvp1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -237,6 +245,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_pvp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_sf_3c2e1, 0);
 } // int3c2e_pvp1_spinor
 ALL_CINT(int3c2e_pvp1)
@@ -290,6 +299,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_pvxp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_pvxp1_cart
 CACHE_SIZE_T int3c2e_pvxp1_sph(double *out, FINT *dims, FINT *shls,
@@ -298,6 +308,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_pvxp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_pvxp1_sph
 CACHE_SIZE_T int3c2e_pvxp1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -306,6 +317,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_pvxp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_sf_3c2e1, 0);
 } // int3c2e_pvxp1_spinor
 ALL_CINT(int3c2e_pvxp1)
@@ -371,6 +383,7 @@ FINT ng[] = {1, 0, 0, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2c2e_ip1;
+envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_1e);
 } // int2c2e_ip1_cart
 CACHE_SIZE_T int2c2e_ip1_sph(double *out, FINT *dims, FINT *shls,
@@ -379,6 +392,7 @@ FINT ng[] = {1, 0, 0, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2c2e_ip1;
+envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_1e);
 } // int2c2e_ip1_sph
 CACHE_SIZE_T int2c2e_ip1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -449,6 +463,7 @@ FINT ng[] = {0, 0, 1, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2c2e_ip2;
+envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_1e);
 } // int2c2e_ip2_cart
 CACHE_SIZE_T int2c2e_ip2_sph(double *out, FINT *dims, FINT *shls,
@@ -457,6 +472,7 @@ FINT ng[] = {0, 0, 1, 0, 1, 1, 1, 3};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2c2e_ip2;
+envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_1e);
 } // int2c2e_ip2_sph
 CACHE_SIZE_T int2c2e_ip2_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -644,6 +660,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 4, 1, 1};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_spsp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_spsp1_cart
 CACHE_SIZE_T int3c2e_spsp1_sph(double *out, FINT *dims, FINT *shls,
@@ -652,6 +669,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 4, 1, 1};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_spsp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_spsp1_sph
 CACHE_SIZE_T int3c2e_spsp1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -660,6 +678,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 4, 1, 1};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_spsp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_3c2e1, 0);
 } // int3c2e_spsp1_spinor
 ALL_CINT(int3c2e_spsp1)
@@ -757,6 +776,7 @@ FINT ng[] = {2, 1, 0, 0, 3, 4, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipspsp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_ipspsp1_cart
 CACHE_SIZE_T int3c2e_ipspsp1_sph(double *out, FINT *dims, FINT *shls,
@@ -765,6 +785,7 @@ FINT ng[] = {2, 1, 0, 0, 3, 4, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipspsp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_ipspsp1_sph
 CACHE_SIZE_T int3c2e_ipspsp1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -773,6 +794,7 @@ FINT ng[] = {2, 1, 0, 0, 3, 4, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipspsp1;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_3c2e1, 0);
 } // int3c2e_ipspsp1_spinor
 ALL_CINT(int3c2e_ipspsp1)
@@ -870,6 +892,7 @@ FINT ng[] = {1, 1, 1, 0, 3, 4, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_spsp1ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_spsp1ip2_cart
 CACHE_SIZE_T int3c2e_spsp1ip2_sph(double *out, FINT *dims, FINT *shls,
@@ -878,6 +901,7 @@ FINT ng[] = {1, 1, 1, 0, 3, 4, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_spsp1ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_spsp1ip2_sph
 CACHE_SIZE_T int3c2e_spsp1ip2_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -886,6 +910,7 @@ FINT ng[] = {1, 1, 1, 0, 3, 4, 1, 3};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_spsp1ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_3c2e1, 0);
 } // int3c2e_spsp1ip2_spinor
 ALL_CINT(int3c2e_spsp1ip2)
@@ -951,6 +976,7 @@ FINT ng[] = {2, 0, 0, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_ipip1_cart
 CACHE_SIZE_T int3c2e_ipip1_sph(double *out, FINT *dims, FINT *shls,
@@ -959,6 +985,7 @@ FINT ng[] = {2, 0, 0, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_ipip1_sph
 CACHE_SIZE_T int3c2e_ipip1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -967,6 +994,7 @@ FINT ng[] = {2, 0, 0, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_sf_3c2e1, 0);
 } // int3c2e_ipip1_spinor
 ALL_CINT(int3c2e_ipip1)
@@ -1032,6 +1060,7 @@ FINT ng[] = {0, 0, 2, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_ipip2_cart
 CACHE_SIZE_T int3c2e_ipip2_sph(double *out, FINT *dims, FINT *shls,
@@ -1040,6 +1069,7 @@ FINT ng[] = {0, 0, 2, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_ipip2_sph
 CACHE_SIZE_T int3c2e_ipip2_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -1048,6 +1078,7 @@ FINT ng[] = {0, 0, 2, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_sf_3c2e1, 0);
 } // int3c2e_ipip2_spinor
 ALL_CINT(int3c2e_ipip2)
@@ -1113,6 +1144,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipvip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_ipvip1_cart
 CACHE_SIZE_T int3c2e_ipvip1_sph(double *out, FINT *dims, FINT *shls,
@@ -1121,6 +1153,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipvip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_ipvip1_sph
 CACHE_SIZE_T int3c2e_ipvip1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -1129,6 +1162,7 @@ FINT ng[] = {1, 1, 0, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ipvip1;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_sf_3c2e1, 0);
 } // int3c2e_ipvip1_spinor
 ALL_CINT(int3c2e_ipvip1)
@@ -1194,6 +1228,7 @@ FINT ng[] = {1, 0, 1, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip1ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_3c2e1, 0);
 } // int3c2e_ip1ip2_cart
 CACHE_SIZE_T int3c2e_ip1ip2_sph(double *out, FINT *dims, FINT *shls,
@@ -1202,6 +1237,7 @@ FINT ng[] = {1, 0, 1, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip1ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_3c2e1, 0);
 } // int3c2e_ip1ip2_sph
 CACHE_SIZE_T int3c2e_ip1ip2_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -1210,6 +1246,7 @@ FINT ng[] = {1, 0, 1, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int3c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int3c2e_ip1ip2;
+envs.common_factor *= 1.0;
 return CINT3c2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_sf_3c2e1, 0);
 } // int3c2e_ip1ip2_spinor
 ALL_CINT(int3c2e_ip1ip2)
@@ -1275,6 +1312,7 @@ FINT ng[] = {2, 0, 0, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2c2e_ipip1;
+envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_1e);
 } // int2c2e_ipip1_cart
 CACHE_SIZE_T int2c2e_ipip1_sph(double *out, FINT *dims, FINT *shls,
@@ -1283,6 +1321,7 @@ FINT ng[] = {2, 0, 0, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2c2e_ipip1;
+envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_1e);
 } // int2c2e_ipip1_sph
 CACHE_SIZE_T int2c2e_ipip1_spinor(double complex *out, FINT *dims, FINT *shls,
@@ -1353,6 +1392,7 @@ FINT ng[] = {1, 0, 1, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2c2e_ip1ip2;
+envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_1e);
 } // int2c2e_ip1ip2_cart
 CACHE_SIZE_T int2c2e_ip1ip2_sph(double *out, FINT *dims, FINT *shls,
@@ -1361,6 +1401,7 @@ FINT ng[] = {1, 0, 1, 0, 2, 1, 1, 9};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2c2e_ip1ip2;
+envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_1e);
 } // int2c2e_ip1ip2_sph
 CACHE_SIZE_T int2c2e_ip1ip2_spinor(double complex *out, FINT *dims, FINT *shls,

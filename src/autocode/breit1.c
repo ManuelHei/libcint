@@ -190,6 +190,7 @@ FINT ng[] = {1, 3, 0, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_ssp1ssp2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_cart_2e1);
 } // int2e_gauge_r1_ssp1ssp2_cart
@@ -199,6 +200,7 @@ FINT ng[] = {1, 3, 0, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_ssp1ssp2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_sph_2e1);
 } // int2e_gauge_r1_ssp1ssp2_sph
@@ -208,6 +210,7 @@ FINT ng[] = {1, 3, 0, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_ssp1ssp2;
+envs.common_factor *= 1.0;
 return CINT2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_2e1i, &c2s_si_2e2i);
 } // int2e_gauge_r1_ssp1ssp2_spinor
 ALL_CINT(int2e_gauge_r1_ssp1ssp2)
@@ -388,6 +391,7 @@ FINT ng[] = {1, 3, 1, 0, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_ssp1sps2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_cart_2e1);
 } // int2e_gauge_r1_ssp1sps2_cart
@@ -397,6 +401,7 @@ FINT ng[] = {1, 3, 1, 0, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_ssp1sps2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_sph_2e1);
 } // int2e_gauge_r1_ssp1sps2_sph
@@ -406,6 +411,7 @@ FINT ng[] = {1, 3, 1, 0, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_ssp1sps2;
+envs.common_factor *= 1.0;
 return CINT2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_2e1i, &c2s_si_2e2i);
 } // int2e_gauge_r1_ssp1sps2_spinor
 ALL_CINT(int2e_gauge_r1_ssp1sps2)
@@ -586,6 +592,7 @@ FINT ng[] = {2, 2, 0, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_sps1ssp2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_cart_2e1);
 } // int2e_gauge_r1_sps1ssp2_cart
@@ -595,6 +602,7 @@ FINT ng[] = {2, 2, 0, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_sps1ssp2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_sph_2e1);
 } // int2e_gauge_r1_sps1ssp2_sph
@@ -604,6 +612,7 @@ FINT ng[] = {2, 2, 0, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_sps1ssp2;
+envs.common_factor *= 1.0;
 return CINT2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_2e1i, &c2s_si_2e2i);
 } // int2e_gauge_r1_sps1ssp2_spinor
 ALL_CINT(int2e_gauge_r1_sps1ssp2)
@@ -784,6 +793,7 @@ FINT ng[] = {2, 2, 1, 0, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_sps1sps2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_cart_2e1);
 } // int2e_gauge_r1_sps1sps2_cart
@@ -793,6 +803,7 @@ FINT ng[] = {2, 2, 1, 0, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_sps1sps2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_sph_2e1);
 } // int2e_gauge_r1_sps1sps2_sph
@@ -802,6 +813,7 @@ FINT ng[] = {2, 2, 1, 0, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r1_sps1sps2;
+envs.common_factor *= 1.0;
 return CINT2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_2e1i, &c2s_si_2e2i);
 } // int2e_gauge_r1_sps1sps2_spinor
 ALL_CINT(int2e_gauge_r1_sps1sps2)
@@ -986,6 +998,7 @@ FINT ng[] = {1, 2, 0, 2, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_ssp1ssp2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_cart_2e1);
 } // int2e_gauge_r2_ssp1ssp2_cart
@@ -995,6 +1008,7 @@ FINT ng[] = {1, 2, 0, 2, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_ssp1ssp2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_sph_2e1);
 } // int2e_gauge_r2_ssp1ssp2_sph
@@ -1004,6 +1018,7 @@ FINT ng[] = {1, 2, 0, 2, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_ssp1ssp2;
+envs.common_factor *= 1.0;
 return CINT2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_2e1i, &c2s_si_2e2i);
 } // int2e_gauge_r2_ssp1ssp2_spinor
 ALL_CINT(int2e_gauge_r2_ssp1ssp2)
@@ -1188,6 +1203,7 @@ FINT ng[] = {1, 2, 1, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_ssp1sps2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_cart_2e1);
 } // int2e_gauge_r2_ssp1sps2_cart
@@ -1197,6 +1213,7 @@ FINT ng[] = {1, 2, 1, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_ssp1sps2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_sph_2e1);
 } // int2e_gauge_r2_ssp1sps2_sph
@@ -1206,6 +1223,7 @@ FINT ng[] = {1, 2, 1, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_ssp1sps2;
+envs.common_factor *= 1.0;
 return CINT2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_2e1i, &c2s_si_2e2i);
 } // int2e_gauge_r2_ssp1sps2_spinor
 ALL_CINT(int2e_gauge_r2_ssp1sps2)
@@ -1390,6 +1408,7 @@ FINT ng[] = {2, 1, 0, 2, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_sps1ssp2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_cart_2e1);
 } // int2e_gauge_r2_sps1ssp2_cart
@@ -1399,6 +1418,7 @@ FINT ng[] = {2, 1, 0, 2, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_sps1ssp2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_sph_2e1);
 } // int2e_gauge_r2_sps1ssp2_sph
@@ -1408,6 +1428,7 @@ FINT ng[] = {2, 1, 0, 2, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_sps1ssp2;
+envs.common_factor *= 1.0;
 return CINT2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_2e1i, &c2s_si_2e2i);
 } // int2e_gauge_r2_sps1ssp2_spinor
 ALL_CINT(int2e_gauge_r2_sps1ssp2)
@@ -1592,6 +1613,7 @@ FINT ng[] = {2, 1, 1, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_sps1sps2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_cart_2e1);
 } // int2e_gauge_r2_sps1sps2_cart
@@ -1601,6 +1623,7 @@ FINT ng[] = {2, 1, 1, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_sps1sps2;
+envs.common_factor *= 1.0;
 envs.common_factor *= -1;
 return CINT2e_drv(out, dims, &envs, opt, cache, &c2s_sph_2e1);
 } // int2e_gauge_r2_sps1sps2_sph
@@ -1610,6 +1633,7 @@ FINT ng[] = {2, 1, 1, 1, 4, 4, 4, 1};
 CINTEnvVars envs;
 CINTinit_int2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
 envs.f_gout = &CINTgout2e_int2e_gauge_r2_sps1sps2;
+envs.common_factor *= 1.0;
 return CINT2e_spinor_drv(out, dims, &envs, opt, cache, &c2s_si_2e1i, &c2s_si_2e2i);
 } // int2e_gauge_r2_sps1sps2_spinor
 ALL_CINT(int2e_gauge_r2_sps1sps2)

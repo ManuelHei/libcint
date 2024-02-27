@@ -245,3 +245,8 @@
   '("int1e_rinvipiprip"         ( \| rinv \| nabla nabla r nabla ))
   '("int1e_ipiprinvrip"         ( nabla nabla \| rinv \| r nabla ))
 )
+
+
+(gen-cint "test.c"
+  '("int2c2e_test"              ( \| x r12 r12 r12 \| ))
+)
