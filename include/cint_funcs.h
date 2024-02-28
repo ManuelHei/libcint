@@ -1155,8 +1155,3 @@ extern CINTOptimizerFunction int1e_ipiprinvrip_optimizer;
 extern CINTIntegralFunction int1e_ipiprinvrip_cart;
 extern CINTIntegralFunction int1e_ipiprinvrip_sph;
 extern CINTIntegralFunction int1e_ipiprinvrip_spinor;
-
-extern CINTOptimizerFunction test_y_optimizer;
-extern CINTIntegralFunction test_y_cart;
-extern CINTIntegralFunction test_y_sph;
-extern CINTIntegralFunction test_y_spinor;
