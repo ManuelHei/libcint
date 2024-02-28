@@ -263,4 +263,7 @@
   '("int2e_x0_nablar12"             ( x0 \, \| nabla-r12 \| \, ))
   '("int2e_y0_nablar12"             ( y0 \, \| nabla-r12 \| \, ))
   '("int2e_z0_nablar12"             ( z0 \, \| nabla-r12 \| \, ))
+  '("int2e_x0"             ( x0 \, \| \, ))
+  '("int2e_y0"             ( y0 \, \| \, ))
+  '("int2e_z0"             ( z0 \, \| \, ))
 )
