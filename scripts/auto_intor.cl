@@ -248,12 +248,12 @@
 
 
 (gen-cint "test.c"
-  '("int2c2e_left_x0"              ( x0 \| \| ))
-  '("int2c2e_left_y0"              ( y0 \| \|))
-  '("int2c2e_left_z0"              ( z0 \| \|))
-  '("int2c2e_right_x0"             ( \| \| x0 ))
-  '("int2c2e_right_y0"             ( \| \| y0 ))
-  '("int2c2e_right_z0"             ( \| \| z0 ))
+  '("int2c2e_left_x0"              ( x0 \| ))
+  '("int2c2e_left_y0"              ( y0 \| ))
+  '("int2c2e_left_z0"              ( z0 \| ))
+  '("int2c2e_right_x0"             ( \| x0 ))
+  '("int2c2e_right_y0"             ( \| y0 ))
+  '("int2c2e_right_z0"             ( \| z0 ))
   '("int2c2e_r0"                   ( r0 \| \| ))
   '("int2c2e_x0r12"                ( x0 \| r12 \| ))
 )
