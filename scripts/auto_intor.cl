@@ -257,10 +257,6 @@
   '("int2c2e_x0r12"             ( x0 \| r12 \| ))
 )
 
-(gen-cint "test1.c"
-  '("int2e_rinv2"             ( \, \| r12 \| \, ))
-)
-
-(gen-cint "test2.c"
-  '("int2e_rinv2"             ( \, \| r12 r12 \| \, ))
+(gen-cint "v_der.c"
+  '("int2e_nablar12"             ( \, \| nabla-r12 \| \, ))
 )
