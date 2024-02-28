@@ -14,7 +14,7 @@
 #include "cint2e.h"
 #include "misc.h"
 #include "c2f.h"
-/* <X0 i|OVLP |j> */
+/* <X0 i||j> */
 void CINTgout1e_int2c2e_left_x0(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
@@ -67,7 +67,7 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 0);
 } // int2c2e_left_x0_spinor
 ALL_CINT1E(int2c2e_left_x0)
 ALL_CINT1E_FORTRAN_(int2c2e_left_x0)
-/* <Y0 i|OVLP |j> */
+/* <Y0 i||j> */
 void CINTgout1e_int2c2e_left_y0(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
@@ -120,7 +120,7 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 0);
 } // int2c2e_left_y0_spinor
 ALL_CINT1E(int2c2e_left_y0)
 ALL_CINT1E_FORTRAN_(int2c2e_left_y0)
-/* <Z0 i|OVLP |j> */
+/* <Z0 i||j> */
 void CINTgout1e_int2c2e_left_z0(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
@@ -173,7 +173,7 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 0);
 } // int2c2e_left_z0_spinor
 ALL_CINT1E(int2c2e_left_z0)
 ALL_CINT1E_FORTRAN_(int2c2e_left_z0)
-/* <i|OVLP |X0 j> */
+/* <i||X0 j> */
 void CINTgout1e_int2c2e_right_x0(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
@@ -226,7 +226,7 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 0);
 } // int2c2e_right_x0_spinor
 ALL_CINT1E(int2c2e_right_x0)
 ALL_CINT1E_FORTRAN_(int2c2e_right_x0)
-/* <i|OVLP |Y0 j> */
+/* <i||Y0 j> */
 void CINTgout1e_int2c2e_right_y0(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
@@ -279,7 +279,7 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 0);
 } // int2c2e_right_y0_spinor
 ALL_CINT1E(int2c2e_right_y0)
 ALL_CINT1E_FORTRAN_(int2c2e_right_y0)
-/* <i|OVLP |Z0 j> */
+/* <i||Z0 j> */
 void CINTgout1e_int2c2e_right_z0(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
