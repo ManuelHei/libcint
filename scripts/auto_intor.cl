@@ -254,11 +254,12 @@
   '("int2c2e_right_x0"             ( \| \| x0 ))
   '("int2c2e_right_y0"             ( \| \| y0 ))
   '("int2c2e_right_z0"             ( \| \| z0 ))
-  '("int2c2e_x0r12"             ( x0 \| r12 \| ))
+  '("int2c2e_r0"                   ( r0 \| \| ))
+  '("int2c2e_x0r12"                ( x0 \| r12 \| ))
 )
 
 (gen-cint "v_der.c"
-  '("int2e_nablar12"             ( \, \| nabla-r12 \| \, ))
+  '("int2e_nablar12"                ( \, \| nabla-r12 \| \, ))
   '("int2e_x0_nablar12"             ( x0 \, \| nabla-r12 \| \, ))
   '("int2e_y0_nablar12"             ( y0 \, \| nabla-r12 \| \, ))
   '("int2e_z0_nablar12"             ( z0 \, \| nabla-r12 \| \, ))
