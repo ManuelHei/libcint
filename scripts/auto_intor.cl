@@ -247,15 +247,13 @@
 )
 
 
-(gen-cint "test.c"
-  '("int2c2e_left_x0"              ( x0 \| ))
-  '("int2c2e_left_y0"              ( y0 \| ))
-  '("int2c2e_left_z0"              ( z0 \| ))
-  '("int2c2e_right_x0"             ( \| x0 ))
-  '("int2c2e_right_y0"             ( \| y0 ))
-  '("int2c2e_right_z0"             ( \| z0 ))
-  '("int2c2e_r0"                   ( r0 \| \| ))
+(gen-cint "v.c"
   '("int2c2e_x0r12"                ( x0 \| r12 \| ))
+  '("int2c2e_y0r12"                ( y0 \| r12 \| ))
+  '("int2c2e_z0r12"                ( z0 \| r12 \| ))
+  '("int2c2e_x02r12"                ( x0 x0 \| r12 \| ))
+  '("int2c2e_y02r12"                ( y0 y0 \| r12 \| ))
+  '("int2c2e_z02r12"                ( z0 z0 \| r12 \| ))
 )
 
 (gen-cint "v_der.c"
@@ -263,7 +261,7 @@
   '("int2e_x0_nablar12"             ( x0 \, \| nabla-r12 \| \, ))
   '("int2e_y0_nablar12"             ( y0 \, \| nabla-r12 \| \, ))
   '("int2e_z0_nablar12"             ( z0 \, \| nabla-r12 \| \, ))
-  '("int2e_x0"             ( x0 \, \| \, ))
-  '("int2e_y0"             ( y0 \, \| \, ))
-  '("int2e_z0"             ( z0 \, \| \, ))
+  '("int2e_x02_nablar12"           ( x0 x0 \, \| nabla-r12 \| \, ))
+  '("int2e_y02_nablar12"           ( y0 y0 \, \| nabla-r12 \| \, ))
+  '("int2e_z02_nablar12"           ( z0 z0 \, \| nabla-r12 \| \, ))
 )
