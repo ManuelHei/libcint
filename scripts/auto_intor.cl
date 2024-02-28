@@ -259,4 +259,7 @@
 
 (gen-cint "v_der.c"
   '("int2e_nablar12"             ( \, \| nabla-r12 \| \, ))
+  '("int2e_x0_nablar12"             ( x0 \, \| nabla-r12 \| \, ))
+  '("int2e_y0_nablar12"             ( y0 \, \| nabla-r12 \| \, ))
+  '("int2e_z0_nablar12"             ( z0 \, \| nabla-r12 \| \, ))
 )
