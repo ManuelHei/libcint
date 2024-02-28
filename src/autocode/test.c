@@ -15,7 +15,7 @@
 #include "misc.h"
 #include "c2f.h"
 /* (i |X R12 R12 R12 |j) */
-static void CINTgout2e_test_x(double *gout,
+static void CINTgout2e_int2c2e_test_x(double *gout,
 double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT nrys_roots = envs->nrys_roots;
@@ -61,37 +61,37 @@ gout[n*1+0] = + s[0];
 } else {
 gout[n*1+0] += + s[0];
 }}}
-void test_x_optimizer(CINTOpt **opt, FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env) {
+void int2c2e_test_x_optimizer(CINTOpt **opt, FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTall_2c2e_optimizer(opt, ng, atm, natm, bas, nbas, env);
 }
-CACHE_SIZE_T test_x_cart(double *out, FINT *dims, FINT *shls,
+CACHE_SIZE_T int2c2e_test_x_cart(double *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
-envs.f_gout = &CINTgout2e_test_x;
+envs.f_gout = &CINTgout2e_int2c2e_test_x;
 envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_1e);
-} // test_x_cart
-CACHE_SIZE_T test_x_sph(double *out, FINT *dims, FINT *shls,
+} // int2c2e_test_x_cart
+CACHE_SIZE_T int2c2e_test_x_sph(double *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
-envs.f_gout = &CINTgout2e_test_x;
+envs.f_gout = &CINTgout2e_int2c2e_test_x;
 envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_1e);
-} // test_x_sph
-CACHE_SIZE_T test_x_spinor(double complex *out, FINT *dims, FINT *shls,
+} // int2c2e_test_x_sph
+CACHE_SIZE_T int2c2e_test_x_spinor(double complex *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 fprintf(stderr, "&c2s_sf_1e_spinor not implementedn");
 return 0;
 }
-ALL_CINT(test_x)
-ALL_CINT_FORTRAN_(test_x)
+ALL_CINT(int2c2e_test_x)
+ALL_CINT_FORTRAN_(int2c2e_test_x)
 /* (i |Y R12 R12 R12 |j) */
-static void CINTgout2e_test_y(double *gout,
+static void CINTgout2e_int2c2e_test_y(double *gout,
 double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT nrys_roots = envs->nrys_roots;
@@ -137,37 +137,37 @@ gout[n*1+0] = + s[1];
 } else {
 gout[n*1+0] += + s[1];
 }}}
-void test_y_optimizer(CINTOpt **opt, FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env) {
+void int2c2e_test_y_optimizer(CINTOpt **opt, FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTall_2c2e_optimizer(opt, ng, atm, natm, bas, nbas, env);
 }
-CACHE_SIZE_T test_y_cart(double *out, FINT *dims, FINT *shls,
+CACHE_SIZE_T int2c2e_test_y_cart(double *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
-envs.f_gout = &CINTgout2e_test_y;
+envs.f_gout = &CINTgout2e_int2c2e_test_y;
 envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_1e);
-} // test_y_cart
-CACHE_SIZE_T test_y_sph(double *out, FINT *dims, FINT *shls,
+} // int2c2e_test_y_cart
+CACHE_SIZE_T int2c2e_test_y_sph(double *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
-envs.f_gout = &CINTgout2e_test_y;
+envs.f_gout = &CINTgout2e_int2c2e_test_y;
 envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_1e);
-} // test_y_sph
-CACHE_SIZE_T test_y_spinor(double complex *out, FINT *dims, FINT *shls,
+} // int2c2e_test_y_sph
+CACHE_SIZE_T int2c2e_test_y_spinor(double complex *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 fprintf(stderr, "&c2s_sf_1e_spinor not implementedn");
 return 0;
 }
-ALL_CINT(test_y)
-ALL_CINT_FORTRAN_(test_y)
+ALL_CINT(int2c2e_test_y)
+ALL_CINT_FORTRAN_(int2c2e_test_y)
 /* (i |Z R12 R12 R12 |j) */
-static void CINTgout2e_test_z(double *gout,
+static void CINTgout2e_int2c2e_test_z(double *gout,
 double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT nrys_roots = envs->nrys_roots;
@@ -213,32 +213,32 @@ gout[n*1+0] = + s[2];
 } else {
 gout[n*1+0] += + s[2];
 }}}
-void test_z_optimizer(CINTOpt **opt, FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env) {
+void int2c2e_test_z_optimizer(CINTOpt **opt, FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTall_2c2e_optimizer(opt, ng, atm, natm, bas, nbas, env);
 }
-CACHE_SIZE_T test_z_cart(double *out, FINT *dims, FINT *shls,
+CACHE_SIZE_T int2c2e_test_z_cart(double *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
-envs.f_gout = &CINTgout2e_test_z;
+envs.f_gout = &CINTgout2e_int2c2e_test_z;
 envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_cart_1e);
-} // test_z_cart
-CACHE_SIZE_T test_z_sph(double *out, FINT *dims, FINT *shls,
+} // int2c2e_test_z_cart
+CACHE_SIZE_T int2c2e_test_z_sph(double *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 FINT ng[] = {0, 1, 0, 0, 1, 1, 1, 1};
 CINTEnvVars envs;
 CINTinit_int2c2e_EnvVars(&envs, ng, shls, atm, natm, bas, nbas, env);
-envs.f_gout = &CINTgout2e_test_z;
+envs.f_gout = &CINTgout2e_int2c2e_test_z;
 envs.common_factor *= 1.0;
 return CINT2c2e_drv(out, dims, &envs, opt, cache, &c2s_sph_1e);
-} // test_z_sph
-CACHE_SIZE_T test_z_spinor(double complex *out, FINT *dims, FINT *shls,
+} // int2c2e_test_z_sph
+CACHE_SIZE_T int2c2e_test_z_spinor(double complex *out, FINT *dims, FINT *shls,
 FINT *atm, FINT natm, FINT *bas, FINT nbas, double *env, CINTOpt *opt, double *cache) {
 fprintf(stderr, "&c2s_sf_1e_spinor not implementedn");
 return 0;
 }
-ALL_CINT(test_z)
-ALL_CINT_FORTRAN_(test_z)
+ALL_CINT(int2c2e_test_z)
+ALL_CINT_FORTRAN_(int2c2e_test_z)
