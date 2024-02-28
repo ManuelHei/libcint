@@ -254,5 +254,5 @@
   '("int2c2e_right_x0"             ( \| x0 ))
   '("int2c2e_right_y0"             ( \| y0 ))
   '("int2c2e_right_z0"             ( \| z0 ))
-  '("int2c2e_rinv2"             ( \| rinv rinv \| ))
+  '("int2c2e_rinv2"             ( \| r12 r12 \| ))
 )
