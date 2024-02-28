@@ -14,14 +14,18 @@
 #include "cint2e.h"
 #include "misc.h"
 #include "c2f.h"
-/* <i|X |j> */
+/* <i|XC |j> */
 void CINTgout1e_int2c2e_test_x(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
 double *g0 = g;
 double *g1 = g0 + envs->g_size * 3;
+double drj[3];
+drj[0] = envs->rj[0] - envs->env[PTR_COMMON_ORIG+0];
+drj[1] = envs->rj[1] - envs->env[PTR_COMMON_ORIG+1];
+drj[2] = envs->rj[2] - envs->env[PTR_COMMON_ORIG+2];
 double s[3];
-G1E_R_J(g1, g0, envs->i_l+0, envs->j_l+0, 0);
+G1E_RCJ(g1, g0, envs->i_l+0, envs->j_l+0, 0);
 for (n = 0; n < nf; n++) {
 ix = idx[0+n*3];
 iy = idx[1+n*3];
@@ -67,14 +71,18 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 0);
 } // int2c2e_test_x_spinor
 ALL_CINT1E(int2c2e_test_x)
 ALL_CINT1E_FORTRAN_(int2c2e_test_x)
-/* <i|Y |j> */
+/* <i|YC |j> */
 void CINTgout1e_int2c2e_test_y(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
 double *g0 = g;
 double *g1 = g0 + envs->g_size * 3;
+double drj[3];
+drj[0] = envs->rj[0] - envs->env[PTR_COMMON_ORIG+0];
+drj[1] = envs->rj[1] - envs->env[PTR_COMMON_ORIG+1];
+drj[2] = envs->rj[2] - envs->env[PTR_COMMON_ORIG+2];
 double s[3];
-G1E_R_J(g1, g0, envs->i_l+0, envs->j_l+0, 0);
+G1E_RCJ(g1, g0, envs->i_l+0, envs->j_l+0, 0);
 for (n = 0; n < nf; n++) {
 ix = idx[0+n*3];
 iy = idx[1+n*3];
@@ -120,14 +128,18 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 0);
 } // int2c2e_test_y_spinor
 ALL_CINT1E(int2c2e_test_y)
 ALL_CINT1E_FORTRAN_(int2c2e_test_y)
-/* <i|Z |j> */
+/* <i|ZC |j> */
 void CINTgout1e_int2c2e_test_z(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT ix, iy, iz, n;
 double *g0 = g;
 double *g1 = g0 + envs->g_size * 3;
+double drj[3];
+drj[0] = envs->rj[0] - envs->env[PTR_COMMON_ORIG+0];
+drj[1] = envs->rj[1] - envs->env[PTR_COMMON_ORIG+1];
+drj[2] = envs->rj[2] - envs->env[PTR_COMMON_ORIG+2];
 double s[3];
-G1E_R_J(g1, g0, envs->i_l+0, envs->j_l+0, 0);
+G1E_RCJ(g1, g0, envs->i_l+0, envs->j_l+0, 0);
 for (n = 0; n < nf; n++) {
 ix = idx[0+n*3];
 iy = idx[1+n*3];

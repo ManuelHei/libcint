@@ -248,7 +248,7 @@
 
 
 (gen-cint "test.c"
-  '("int2c2e_test_x"              ( \| x \| ))
-  '("int2c2e_test_y"              ( \| y \| ))
-  '("int2c2e_test_z"              ( \| z \| ))
+  '("int2c2e_test_x"              ( \| xc \| ))
+  '("int2c2e_test_y"              ( \| yc \| ))
+  '("int2c2e_test_z"              ( \| zc \| ))
 )
