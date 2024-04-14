@@ -261,6 +261,7 @@
   '("int1e_x0_nablarinv"             ( x \| nabla-rinv \| ))
   '("int1e_y0_nablarinv"             ( y \| nabla-rinv \| ))
   '("int1e_z0_nablarinv"             ( z \| nabla-rinv \| ))
+  '("int1e_r0_nablarinv"             ( r0 \| nabla-rinv \| ))
 ;   '("int1e_x02_nablarinv"           ( x0 x0 \, \| nabla-rinv \| \, ))
 ;   '("int1e_y02_nablarinv"           ( y0 y0 \, \| nabla-rinv \| \, ))
 ;   '("int1e_z02_nablarinv"           ( z0 z0 \, \| nabla-rinv \| \, ))
