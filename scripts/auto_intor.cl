@@ -246,22 +246,43 @@
   '("int1e_ipiprinvrip"         ( nabla nabla \| rinv \| r nabla ))
 )
 
+; (gen-cint "v_ee.c"
+;   '("int1e_rinv"                  ( \| rinv \| ))
+;   '("int1e_x0rinv"                ( x0 \| rinv \| ))
+;   '("int1e_y0rinv"                ( y0 \| rinv \| ))
+;   '("int1e_z0rinv"                ( z0 \| rinv \| ))
+;   '("int1e_x02rinv"                ( x0 x0 \| rinv \| ))
+;   '("int1e_y02rinv"                ( y0 y0 \| rinv \| ))
+;   '("int1e_z02rinv"                ( z0 z0 \| rinv \| ))
+; )
 
-(gen-cint "v.c"
-  '("int2c2e_x0r12"                ( x0 \| r12 \| ))
-  '("int2c2e_y0r12"                ( y0 \| r12 \| ))
-  '("int2c2e_z0r12"                ( z0 \| r12 \| ))
-  '("int2c2e_x02r12"                ( x0 x0 \| r12 \| ))
-  '("int2c2e_y02r12"                ( y0 y0 \| r12 \| ))
-  '("int2c2e_z02r12"                ( z0 z0 \| r12 \| ))
+(gen-cint "v_nuc_der.c"
+  ; '("int1e_nablarinv"                ( \, \| nabla-rinv \| \, ))
+  '("int1e_x0_nablarinv"             ( x0 \| nabla-rinv \| ))
+  '("int1e_y0_nablarinv"             ( y0 \| nabla-rinv \| ))
+  '("int1e_z0_nablarinv"             ( z0 \| nabla-rinv \| ))
+;   '("int1e_x02_nablarinv"           ( x0 x0 \, \| nabla-rinv \| \, ))
+;   '("int1e_y02_nablarinv"           ( y0 y0 \, \| nabla-rinv \| \, ))
+;   '("int1e_z02_nablarinv"           ( z0 z0 \, \| nabla-rinv \| \, ))
+; 
 )
 
-(gen-cint "v_der.c"
-  '("int2e_nablar12"                ( \, \| nabla-r12 \| \, ))
+; (gen-cint "v_nuc.c"
+;   '("int2c2e_r12"                  ( \| r12 \| ))
+;   '("int2c2e_x0r12"                ( x0 \| r12 \| ))
+;   '("int2c2e_y0r12"                ( y0 \| r12 \| ))
+;   '("int2c2e_z0r12"                ( z0 \| r12 \| ))
+;   '("int2c2e_x02r12"                ( x0 x0 \| r12 \| ))
+;   '("int2c2e_y02r12"                ( y0 y0 \| r12 \| ))
+;   '("int2c2e_z02r12"                ( z0 z0 \| r12 \| ))
+; )
+
+(gen-cint "v_ee_der.c"
+  ; '("int2e_nablar12"                ( \, \| nabla-r12 \| \, ))
   '("int2e_x0_nablar12"             ( x0 \, \| nabla-r12 \| \, ))
   '("int2e_y0_nablar12"             ( y0 \, \| nabla-r12 \| \, ))
   '("int2e_z0_nablar12"             ( z0 \, \| nabla-r12 \| \, ))
-  '("int2e_x02_nablar12"           ( x0 x0 \, \| nabla-r12 \| \, ))
-  '("int2e_y02_nablar12"           ( y0 y0 \, \| nabla-r12 \| \, ))
-  '("int2e_z02_nablar12"           ( z0 z0 \, \| nabla-r12 \| \, ))
+  ; '("int2e_x02_nablar12"           ( x0 x0 \, \| nabla-r12 \| \, ))
+  ; '("int2e_y02_nablar12"           ( y0 y0 \, \| nabla-r12 \| \, ))
+  ; '("int2e_z02_nablar12"           ( z0 z0 \, \| nabla-r12 \| \, ))
 )
