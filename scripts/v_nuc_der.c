@@ -14,7 +14,7 @@
 #include "cint2e.h"
 #include "misc.h"
 #include "c2f.h"
-/* <X i|NABLA-RINV |j> */
+/* <X0 i|NABLA-RINV |j> */
 void CINTgout1e_int1e_x0_nablarinv(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT nrys_roots = envs->nrys_roots;
@@ -26,8 +26,8 @@ double *g3 = g2 + envs->g_size * 3;
 G2E_D_J(g1, g0, envs->i_l+1, envs->j_l+0, 0, 0);
 G2E_D_I(g2, g0, envs->i_l+1, envs->j_l+0, 0, 0);
 for (ix = 0; ix < envs->g_size * 3; ix++) {g1[ix] += g2[ix];}
-G2E_R_I(g2, g0, envs->i_l+0, envs->j_l, 0, 0);
-G2E_R_I(g3, g1, envs->i_l+0, envs->j_l, 0, 0);
+G2E_R0I(g2, g0, envs->i_l+0, envs->j_l, 0, 0);
+G2E_R0I(g3, g1, envs->i_l+0, envs->j_l, 0, 0);
 double s[9];
 for (n = 0; n < nf; n++) {
 ix = idx[0+n*3];
@@ -87,7 +87,7 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 1);
 } // int1e_x0_nablarinv_spinor
 ALL_CINT1E(int1e_x0_nablarinv)
 ALL_CINT1E_FORTRAN_(int1e_x0_nablarinv)
-/* <Y i|NABLA-RINV |j> */
+/* <Y0 i|NABLA-RINV |j> */
 void CINTgout1e_int1e_y0_nablarinv(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT nrys_roots = envs->nrys_roots;
@@ -99,8 +99,8 @@ double *g3 = g2 + envs->g_size * 3;
 G2E_D_J(g1, g0, envs->i_l+1, envs->j_l+0, 0, 0);
 G2E_D_I(g2, g0, envs->i_l+1, envs->j_l+0, 0, 0);
 for (ix = 0; ix < envs->g_size * 3; ix++) {g1[ix] += g2[ix];}
-G2E_R_I(g2, g0, envs->i_l+0, envs->j_l, 0, 0);
-G2E_R_I(g3, g1, envs->i_l+0, envs->j_l, 0, 0);
+G2E_R0I(g2, g0, envs->i_l+0, envs->j_l, 0, 0);
+G2E_R0I(g3, g1, envs->i_l+0, envs->j_l, 0, 0);
 double s[9];
 for (n = 0; n < nf; n++) {
 ix = idx[0+n*3];
@@ -160,7 +160,7 @@ return CINT1e_spinor_drv(out, dims, &envs, cache, &c2s_sf_1e, 1);
 } // int1e_y0_nablarinv_spinor
 ALL_CINT1E(int1e_y0_nablarinv)
 ALL_CINT1E_FORTRAN_(int1e_y0_nablarinv)
-/* <Z i|NABLA-RINV |j> */
+/* <Z0 i|NABLA-RINV |j> */
 void CINTgout1e_int1e_z0_nablarinv(double *gout, double *g, FINT *idx, CINTEnvVars *envs, FINT gout_empty) {
 FINT nf = envs->nf;
 FINT nrys_roots = envs->nrys_roots;
@@ -172,8 +172,8 @@ double *g3 = g2 + envs->g_size * 3;
 G2E_D_J(g1, g0, envs->i_l+1, envs->j_l+0, 0, 0);
 G2E_D_I(g2, g0, envs->i_l+1, envs->j_l+0, 0, 0);
 for (ix = 0; ix < envs->g_size * 3; ix++) {g1[ix] += g2[ix];}
-G2E_R_I(g2, g0, envs->i_l+0, envs->j_l, 0, 0);
-G2E_R_I(g3, g1, envs->i_l+0, envs->j_l, 0, 0);
+G2E_R0I(g2, g0, envs->i_l+0, envs->j_l, 0, 0);
+G2E_R0I(g3, g1, envs->i_l+0, envs->j_l, 0, 0);
 double s[9];
 for (n = 0; n < nf; n++) {
 ix = idx[0+n*3];
