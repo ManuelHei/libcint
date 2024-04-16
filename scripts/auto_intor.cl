@@ -287,6 +287,8 @@
   '("int2e_x0_nablar12"             ( x0 \, \| nabla-r12 \| \, ))
   '("int2e_y0_nablar12"             ( y0 \, \| nabla-r12 \| \, ))
   '("int2e_z0_nablar12"             ( z0 \, \| nabla-r12 \| \, ))
+  '("int2e_r0_nablar12"             ( r0 dot nabla \, \| r12 \| \, ))
+  '("int2e_r12"                     ( \, \| r12 \| \, ))
   ; '("int2e_x02_nablar12"           ( x0 x0 \, \| nabla-r12 \| \, ))
   ; '("int2e_y02_nablar12"           ( y0 y0 \, \| nabla-r12 \| \, ))
   ; '("int2e_z02_nablar12"           ( z0 z0 \, \| nabla-r12 \| \, ))
