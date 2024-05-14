@@ -294,3 +294,7 @@
   ; '("int2e_y02_nablar12"           ( y0 y0 \, \| nabla-r12 \| \, ))
   ; '("int2e_z02_nablar12"           ( z0 z0 \, \| nabla-r12 \| \, ))
 )
+
+(gen-cint "v_xc_der.c"
+  '("int1e_r0_nabla"             ( r0 dot nabla \| \| ))
+)
